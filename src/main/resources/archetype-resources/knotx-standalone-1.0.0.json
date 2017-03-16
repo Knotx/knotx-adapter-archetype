@@ -6,7 +6,7 @@
     "knotx:io.knotx.FragmentAssembler",
     "knotx:io.knotx.ServiceKnot",
     "knotx:io.knotx.HandlebarsKnot",
-    "knotx:${package}.ExampleServiceAdapter"
+    "knotx:${package}.adapters.example.ExampleServiceAdapter"
   ],
   "config": {
     "knotx:io.knotx.ServiceKnot": {
