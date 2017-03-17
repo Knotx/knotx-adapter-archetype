@@ -1,8 +1,8 @@
+![Knot.x logo](https://avatars2.githubusercontent.com/u/24564424?v=3&s=400)
+
 # Knot.x Extension Maven Archetype
 
 Use this archetype to generate a custon _Knot.x_ extension.
-
-## Project structure
 
 ## Building the archetype
 
