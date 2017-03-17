@@ -17,22 +17,22 @@
         <include>run.sh</include>
       </includes>
     </fileSet>
-    <fileSet filtered="true" packaged="true">
+    <fileSet filtered="true" packaged="false">
       <directory>content</directory>
     </fileSet>
-    <fileSet filtered="true" packaged="true">
+    <fileSet filtered="true" packaged="false">
       <directory>app</directory>
     </fileSet>
     <fileSet filtered="true" packaged="true">
       <directory>src/main/java</directory>
     </fileSet>
-    <fileSet filtered="true" packaged="true">
+    <fileSet filtered="true" packaged="false">
       <directory>src/main/resources</directory>
     </fileSet>
     <fileSet filtered="true" packaged="true">
       <directory>src/test/java</directory>
     </fileSet>
-    <fileSet filtered="true" packaged="true">
+    <fileSet filtered="true" packaged="false">
       <directory>src/test/resources</directory>
     </fileSet>
   </fileSets>
