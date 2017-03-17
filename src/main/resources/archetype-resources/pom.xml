@@ -26,6 +26,11 @@
       <artifactId>knotx-adapter-common</artifactId>
       <version>${knotx.version}</version>
     </dependency>
+    <dependency>
+      <groupId>io.knotx</groupId>
+      <artifactId>knotx-knot-handlebars</artifactId>
+      <version>${knotx.version}</version>
+    </dependency>
 
     <!-- Test dependencies -->
     <dependency>
