@@ -2,7 +2,8 @@
 
 # Knot.x Extension Maven Archetype
 
-Use this archetype to generate a custon _Knot.x_ extension.
+Use this archetype to generate a custon _Knot.x_ extension. Details regarding the contents of a project generated using this archetype can be found
+in the `README.md` file in `src/main/resources/archetype-resources` (or in the main directory once a project has been generated).
 
 ## Building the archetype
 
