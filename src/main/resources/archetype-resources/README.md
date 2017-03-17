@@ -2,6 +2,9 @@
 
 Generated with the [_Knot.x Extension Maven Archetype_](https://github.com/Knotx/knotx-extension-archetype).
 
+Check out the [Knot.x Wiki](https://github.com/Cognifide/knotx/wiki) for more information about the concepts
+and APIs used here.
+
 ## Running
 
 To run the extension:
