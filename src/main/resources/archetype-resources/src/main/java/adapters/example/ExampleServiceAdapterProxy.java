@@ -18,6 +18,9 @@ public class ExampleServiceAdapterProxy extends AbstractAdapterProxy {
   protected Observable<AdapterResponse> processRequest(AdapterRequest adapterRequest) {
     final String message = adapterRequest.getParams().getString("message");
     LOGGER.info("Processing request with message: `{}`", message);
+    /**
+     * In a real scenario, one would connect to an external service here
+     */
     return prepareResponse(message);
   }
 
