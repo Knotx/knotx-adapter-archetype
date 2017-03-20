@@ -1,0 +1,28 @@
+{
+  "modules": [
+    "knotx:io.knotx.KnotxServer",
+    "knotx:io.knotx.FilesystemRepositoryConnector",
+    "knotx:io.knotx.FragmentSplitter",
+    "knotx:io.knotx.FragmentAssembler",
+    "knotx:io.knotx.ServiceKnot",
+    "knotx:io.knotx.HandlebarsKnot",
+    "knotx:${package}.adapters.example.ExampleServiceAdapter"
+  ],
+  "config": {
+    "knotx:io.knotx.ServiceKnot": {
+      "options": {
+        "config": {
+          "services": [
+            {
+              "name": "example-service",
+              "address": "knotx.adapter.service.example",
+              "params": {
+                "message": "Hello Knot.x"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
