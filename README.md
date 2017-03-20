@@ -1,3 +1,7 @@
+[![][travis img]][travis]
+[![][license img]][license]
+[![][gitter img]][gitter]
+
 ![Knot.x logo](https://avatars2.githubusercontent.com/u/24564424?v=3&s=400)
 
 # Knot.x Extension Maven Archetype
@@ -24,3 +28,12 @@ You will be asked to provide values for the following properties:
 - `version` - this is the initial version of the project being generated
 - `package` - this is the base package for all Java classes in the Maven project being generated
 - `projectName` - this is a human-readable project name to be used in the resulting `pom.xml` and documentation
+
+[travis]:https://travis-ci.org/Knotx/knotx-extension-archetype/
+[travis img]:https://api.travis-ci.org/Knotx/knotx-extension-archetype.svg?branch=master
+
+[license]:https://github.com/Knotx/knotx-extension-archetype/blob/master/LICENSE
+[license img]:https://img.shields.io/badge/License-Apache%202.0-blue.svg
+
+[gitter]:https://gitter.im/Knotx/Lobby
+[gitter img]:https://badges.gitter.im/Knotx/knotx-extensions.svg
