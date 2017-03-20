@@ -2,7 +2,7 @@
 [![][license img]][license]
 [![][gitter img]][gitter]
 
-![Knot.x logo](https://avatars2.githubusercontent.com/u/24564424?v=3&s=400)
+![Knot.x logo](https://raw.githubusercontent.com/Cognifide/knotx/master/icons/180x180.png)
 
 # Knot.x Extension Maven Archetype
 
