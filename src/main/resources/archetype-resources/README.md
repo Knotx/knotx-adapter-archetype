@@ -19,10 +19,10 @@ To run the extension:
 
 To deploy the extension to a remote location:
 
-1. Specify the `serverId` property value in the pom.xml file, for example `my-server`
-2. Specify the `deploymentUrl` property value in the pom.xml file, for example `localhost:2222/content/knotx/extensions`
+1. Specify the `serverId` property value in the `pom.xml` file, for example `my-server`
+2. Specify the `deploymentUrl` property value in the `pom.xml` file, for example `localhost:2222/content/knotx/extensions`
 This is the directory that the .jar file with your extension will be uploaded to
-3. Configure your server in your Maven settings.xml file with the id from step 1, for example:
+3. Configure your server in your Maven `settings.xml` file with the id from step 1, for example:
 
 ```
 <server>
