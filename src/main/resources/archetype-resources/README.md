@@ -15,6 +15,25 @@ To run the extension:
 4. Copy the fat jar from the `target` directory into the `apps` directory
 5. Execute the `run.sh` bash script.
 
+## Deployment
+
+To deploy the extension to a remote location:
+
+1. Specify the `serverId` property value in the pom.xml file, for example `my-server`
+2. Specify the `deploymentUrl` property value in the pom.xml file, for example `localhost:2222/content/knotx/extensions`
+This is the directory that the .jar file with your extension will be uploaded to
+3. Configure your server in your Maven settings.xml file with the id from step 1, for example:
+
+```
+<server>
+    <id>my-server</id>
+    <username>user</username>
+    <password>password</password>
+</server>
+```
+
+4. Run `mvn clean install wagon:upload-single`
+
 ## Project structure
 
 The project follows the following logical structure:
