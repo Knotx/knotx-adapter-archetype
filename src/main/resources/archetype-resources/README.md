@@ -40,8 +40,8 @@ The project follows the following logical structure:
 │       ├── java (java test classes)
 │       ├── resources (test resources)
 |
-├── knotx-standalone-1.0.0.json (Knot.x configuration)
-├── knotx-standalone-1.0.0.logback.xml (Logging configuration)
+├── knotx-standalone-1.1.0.json (Knot.x configuration)
+├── knotx-standalone-1.1.0.logback.xml (Logging configuration)
 ├── run.sh (startup script)
 ├── pom.xml (Project Object Model for the extension)
 ├── README.md (this file)

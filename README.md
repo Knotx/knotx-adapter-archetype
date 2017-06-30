@@ -19,7 +19,7 @@ To build the archetype and install it in your local Maven repository, simply run
 
 Once you've built the archetype, you can generate a new project using the following command:
 
-    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-extension-archetype -DarchetypeVersion=1-SNAPSHOT
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-extension-archetype -DarchetypeVersion=1.1.0-SNAPSHOT
     
 You will be asked to provide values for the following properties:
 
