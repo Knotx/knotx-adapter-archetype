@@ -9,7 +9,7 @@ and APIs used here.
 
 To run the extension:
 
-1. [Download the Knot.x fat jar](https://github.com/Cognifide/knotx/releases) specific to your Knot.x version. 
+1. [Download the Knot.x fat jar](https://oss.sonatype.org/content/groups/public/io/knotx/knotx-standalone/1.1.0/knotx-standalone-1.1.0.fat.jar). 
 2. Copy it to the `apps` folder relative to this `README.md` file.
 3. Build the extension using `mvn clean install`
 4. Copy the fat jar from the `target` directory into the `apps` directory
