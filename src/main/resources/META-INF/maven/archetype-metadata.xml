@@ -12,8 +12,8 @@
       <directory></directory>
       <includes>
         <include>README.md</include>
-        <include>knotx-standalone-1.0.0.json</include>
-        <include>knotx-standalone-1.0.0.logback.xml</include>
+        <include>knotx-standalone-1.1.0.json</include>
+        <include>knotx-standalone-1.1.0.logback.xml</include>
         <include>run.sh</include>
       </includes>
     </fileSet>
