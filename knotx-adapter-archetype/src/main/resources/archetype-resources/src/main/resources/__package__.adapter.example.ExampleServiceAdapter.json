@@ -1,0 +1,11 @@
+{
+  "main": "${package}.adapter.example.ExampleServiceAdapter",
+  "options": {
+    "config": {
+      "address": "knotx.adapter.service.example",
+      "params": {
+        "message": "Hello Knot.x"
+      }
+    }
+  }
+}

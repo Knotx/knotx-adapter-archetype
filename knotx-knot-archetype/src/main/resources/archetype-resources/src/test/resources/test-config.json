@@ -1,0 +1,5 @@
+{
+  "modules": [
+    "knotx:${package}.knot.example.ExampleKnot"
+  ]
+}
