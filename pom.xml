@@ -16,27 +16,19 @@
 
   <groupId>io.knotx.archetypes</groupId>
   <artifactId>knotx-extension-archetype</artifactId>
-  <packaging>maven-archetype</packaging>
-  <version>1.1.0-SNAPSHOT</version>
+  <version>1.1.1-SNAPSHOT</version>
 
-  <name>Knot.x Extension Archetype</name>
-  <description>
-    Use this archetype to generate a Knot.x extension.
-  </description>
+  <name>Knot.x Extensions Parent</name>
+  <packaging>pom</packaging>
 
-  <scm>
-    <connection></connection>
-    <developerConnection></developerConnection>
-    <url></url>
-  </scm>
+  <modules>
+    <module>knotx-adapter-archetype</module>
+    <module>knotx-knot-archetype</module>
+  </modules>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-    </dependency>
-  </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <build>
     <extensions>

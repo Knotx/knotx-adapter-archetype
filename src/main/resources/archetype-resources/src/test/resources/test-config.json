@@ -1,5 +1,0 @@
-{
-  "modules": [
-    "knotx:${package}.adapters.example.ExampleServiceAdapter"
-  ]
-}

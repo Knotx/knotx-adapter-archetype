@@ -6,21 +6,31 @@
 
 # Knot.x Extension Maven Archetype
 
-Use this archetype to generate a custom [_Knot.x_](https://github.com/Cognifide/knotx/wiki) extension. Details regarding the contents of a project generated using this archetype can be found
-in the `README.md` file in `src/main/resources/archetype-resources` (or in the main directory once a project has been generated).
+Use this archetype to generate a custom Knot.x extension:
+ - [Knot / Gateway API](https://github.com/Cognifide/knotx/wiki/Knot)
+ - [Adapter](https://github.com/Cognifide/knotx/wiki/Adapter)
+
+Details regarding the content of a project generated using this archetype can be found
+in the `README.md` file in `src/main/resources/archetype-resources` in a particular submodule 
+(or in the main directory once a project has been generated).
 
 ## Building the archetype
 
 To build the archetype and install it in your local Maven repository, simply run
-
+```
     mvn clean install
-    
+```
 ## Using the Archetype to Generate a Project
 
 Once you've built the archetype, you can generate a new project using the following command:
-
-    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-extension-archetype -DarchetypeVersion=1.1.0-SNAPSHOT
-    
+ - Knot
+ ```
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=1.1.1-SNAPSHOT
+ ```
+ - Adapter
+ ```
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=1.1.1-SNAPSHOT
+ ```
 You will be asked to provide values for the following properties:
 
 - `groupId` - this is the group ID of the Maven project being generated
