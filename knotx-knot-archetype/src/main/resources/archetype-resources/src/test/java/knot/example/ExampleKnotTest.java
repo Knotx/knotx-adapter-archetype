@@ -1,4 +1,4 @@
-package io.knotx.test.knot.example;
+package ${package}.knot.example;
 
 import io.knotx.dataobjects.ClientRequest;
 import io.knotx.dataobjects.KnotContext;

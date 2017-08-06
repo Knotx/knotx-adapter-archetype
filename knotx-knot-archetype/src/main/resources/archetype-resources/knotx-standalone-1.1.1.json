@@ -10,22 +10,7 @@
     "knotx:${package}.knot.example.ExampleKnot"
   ],
   "config": {
-    "knotx:io.knotx.ServiceKnot": {
-      "options": {
-        "config": {
-          "services": [
-            {
-              "name": "example-service",
-              "address": "knotx.adapter.service.example",
-              "params": {
-                "message": "Hello Knot.x"
-              }
-            }
-          ]
-        }
-      }
-    },
-    "knotx:io.knotx.KnotxServer":{
+    "knotx:io.knotx.KnotxServer": {
       "options": {
         "config": {
           "defaultFlow": {
@@ -42,10 +27,15 @@
               "GET": [
                 {
                   "path": "/content/.*",
-                  "address": "knotx.knot.service",
+                  "address": "knotx.knot.example",
                   "onTransition": {
                     "next": {
-                      "address": "knotx.knot.handlebars"
+                      "address": "knotx.knot.service",
+                      "onTransition": {
+                        "next": {
+                          "address": "knotx.knot.handlebars"
+                        }
+                      }
                     }
                   }
                 }
@@ -53,10 +43,6 @@
             },
             "assembler": {
               "address": "knotx.core.assembler"
-            }
-          },
-          "customFlow": {
-            "routing": {
             }
           }
         }

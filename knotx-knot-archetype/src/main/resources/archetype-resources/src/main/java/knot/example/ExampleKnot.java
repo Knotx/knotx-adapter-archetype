@@ -30,7 +30,7 @@ public class ExampleKnot extends AbstractVerticle {
     //register the service proxy on event bus
     consumer = ProxyHelper
         .registerService(KnotProxy.class, getVertx(),
-            new ExampleKnotProxy(),
+            new ExampleKnotProxy(configuration.getSecret()),
             configuration.getAddress());
   }
 

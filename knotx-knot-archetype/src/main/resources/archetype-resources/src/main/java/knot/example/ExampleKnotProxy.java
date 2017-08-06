@@ -4,12 +4,11 @@ import io.knotx.dataobjects.ClientResponse;
 import io.knotx.dataobjects.KnotContext;
 import io.knotx.knot.AbstractKnotProxy;
 import io.netty.handler.codec.http.HttpResponseStatus;
-import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
-import java.util.Collections;
 import java.util.Set;
 import rx.Single;
+
 
 public class ExampleKnotProxy extends AbstractKnotProxy {
 
@@ -17,13 +16,18 @@ public class ExampleKnotProxy extends AbstractKnotProxy {
 
   private static final String DEFAULT_TRANSITION = "next";
 
+  private final String secret;
+
+  ExampleKnotProxy(String secret) {
+    this.secret = secret;
+  }
+
   @Override
   protected Single<KnotContext> processRequest(KnotContext knotContext) {
     LOGGER.trace("This request is processed by me!");
-    String value = someBusinessLogic(knotContext);
+    String value = someBusinessLogic();
     return Single.just(knotContext).map(context -> {
-      JsonObject jsonObject = new JsonObject(Collections.singletonMap("param", value));
-      context.getCache().put("example", Single.just(jsonObject));
+      context.getClientRequest().getParams().add("secret", value);
       context.setTransition(DEFAULT_TRANSITION);
       return context;
     });
@@ -47,7 +51,7 @@ public class ExampleKnotProxy extends AbstractKnotProxy {
     return knotContext;
   }
 
-  private String someBusinessLogic(KnotContext knotContext) {
-    return "value";
+  private String someBusinessLogic() {
+    return secret;
   }
 }
