@@ -82,7 +82,6 @@ $ curl http://localhost:8092/content/local/template.html
   <h1>Adapter Example</h1>
   <!-- start compiled snippet -->
     <p>Message from custom Adapter: Hello Knot.x</p>
-    <p>Custom Handlebars helper: </p>
   <!-- end compiled snippet -->
 </body>
 </html>
