@@ -22,15 +22,20 @@ To build the archetype and install it in your local Maven repository, simply run
 ```
 ## Using the Archetype to Generate a Project
 
-Once you've built the archetype, you can generate a new project using the following command:
+You can generate a new project using the following command:
+
  - Knot
  ```
-    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=1.1.1-SNAPSHOT
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=X.Y.Z
  ```
  - Adapter
  ```
-    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=1.1.1-SNAPSHOT
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=X.Y.Z
  ```
+
+Where `X.Y.Z` is the version of archetype (it corresponds to the Knot.x version) you want to use.
+For example, if you want to use the archetype `1.1.2-SNAPSHOT` that you've just built use `-DarchetypeVersion=1.1.2-SNAPSHOT`.
+ 
 You will be asked to provide values for the following properties:
 
 - `groupId` - this is the group ID of the Maven project being generated
