@@ -8,11 +8,11 @@
 
   <name>${projectName}</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.knotx.io</url>
+  <url>http://knotx.io</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <knotx.version>1.1.1</knotx.version>
+    <knotx.version>1.1.2</knotx.version>
     <vertx.version>3.4.1</vertx.version>
     <!-- FIXME configure the server ID and deployment URL-->
     <serverId>my-server</serverId>
@@ -24,11 +24,13 @@
       <groupId>io.knotx</groupId>
       <artifactId>knotx-core</artifactId>
       <version>${knotx.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.knotx</groupId>
       <artifactId>knotx-adapter-common</artifactId>
       <version>${knotx.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <!-- Test dependencies -->
@@ -90,8 +92,7 @@
                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                     <manifestEntries>
                       <Main-Class>io.knotx.launcher.LogbackLauncher</Main-Class>
-                      <Main-Verticle>io.knotx.launcher.KnotxStarterVerticle
-                      </Main-Verticle>
+                      <Main-Verticle>io.knotx.launcher.KnotxStarterVerticle</Main-Verticle>
                     </manifestEntries>
                   </transformer>
                   <transformer
