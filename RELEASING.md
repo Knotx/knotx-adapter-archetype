@@ -73,5 +73,18 @@ Remember about updating Vert.x version too.
 9. Create a release on Github: [https://github.com/Knotx/knotx-extension-archetype/releases/new](https://github.com/Knotx/knotx-extension-archetype/releases/new)
   - Set the proper Tag version, e.g.: `X.Y.Z` on the `release/X.Y.Z` branch
   - Set the title of the release: `X.Y.Z`
+  - Set the description of the release:
+
+```
+    To generate a new project with dependency to Knot.x X.Y.Z use the following command:
+    - Knot
+    ```
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=X.Y.Z
+    ```
+    - Adapter
+    ```
+    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=X.Y.Z
+    ```
+```
 
 **Replace `<X.Y.Z>` in the maven.org URL with the proper version**
