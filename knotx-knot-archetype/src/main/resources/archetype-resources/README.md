@@ -78,3 +78,22 @@ In the log file you should find:
 ```
 2017-08-06 21:55:28 [vert.x-eventloop-thread-0] TRACE i.k.knot.example.ExampleKnotProxy - This request is processed by me!
 ```
+
+## Deployment
+
+To deploy the extension to a remote location:
+
+1. Specify the `serverId` property value in the `pom.xml` file, for example `my-server`
+2. Specify the `deploymentUrl` property value in the `pom.xml` file, for example `localhost:2222/content/knotx/extensions`
+This is the directory that the .jar file with your extension will be uploaded to
+3. Configure your server in your Maven `settings.xml` file with the id from step 1, for example:
+
+```
+<server>
+    <id>my-server</id>
+    <username>user</username>
+    <password>password</password>
+</server>
+```
+
+4. Run `mvn clean install wagon:upload-single`
