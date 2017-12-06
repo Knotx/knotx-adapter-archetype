@@ -17,9 +17,32 @@
   <groupId>io.knotx.archetypes</groupId>
   <artifactId>knotx-extension-archetype</artifactId>
   <version>1.1.2</version>
+  <packaging>pom</packaging>
 
   <name>Knot.x Extensions Parent</name>
-  <packaging>pom</packaging>
+  <description>Knot.x Extension Maven Archetype for custom Knots and Adapters</description>
+  <url>http://knotx.io</url>
+
+  <inceptionYear>2016</inceptionYear>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Tomasz Michalak</name>
+    </developer>
+    <developer>
+      <name>Maciej Laskowski</name>
+    </developer>
+    <developer>
+      <name>Marcin Czeczko</name>
+    </developer>
+  </developers>
 
   <modules>
     <module>knotx-adapter-archetype</module>
