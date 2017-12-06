@@ -1,0 +1,9 @@
+{
+  "main": "${package}.knot.example.ExampleKnot",
+  "options": {
+    "config": {
+      "address": "knotx.knot.example",
+      "secret": "secretcode1234"
+    }
+  }
+}
