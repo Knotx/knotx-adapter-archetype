@@ -7,8 +7,8 @@ import io.vertx.core.eventbus.MessageConsumer;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
-import io.vertx.rxjava.core.AbstractVerticle;
-import io.vertx.serviceproxy.ProxyHelper;
+import io.vertx.reactivex.core.AbstractVerticle;
+import io.vertx.serviceproxy.ServiceBinder;
 
 public class ExampleKnot extends AbstractVerticle {
 
@@ -17,6 +17,8 @@ public class ExampleKnot extends AbstractVerticle {
   private MessageConsumer<JsonObject> consumer;
 
   private ExampleKnotConfiguration configuration;
+
+  private ServiceBinder serviceBinder;
 
   @Override
   public void init(Vertx vertx, Context context) {
@@ -27,15 +29,16 @@ public class ExampleKnot extends AbstractVerticle {
   @Override
   public void start() throws Exception {
     LOGGER.info("Starting <{}>", this.getClass().getSimpleName());
+
     //register the service proxy on event bus
-    consumer = ProxyHelper
-        .registerService(KnotProxy.class, getVertx(),
-            new ExampleKnotProxy(configuration.getSecret()),
-            configuration.getAddress());
+    serviceBinder = new ServiceBinder(getVertx());
+    consumer = serviceBinder
+        .setAddress(configuration.getAddress())
+        .register(KnotProxy.class, new ExampleKnotProxy(configuration.getSecret()));
   }
 
   @Override
   public void stop() throws Exception {
-    ProxyHelper.unregisterService(consumer);
+    serviceBinder.unregister(consumer);
   }
 }

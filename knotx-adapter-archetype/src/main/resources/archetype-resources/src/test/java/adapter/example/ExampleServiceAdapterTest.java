@@ -1,4 +1,4 @@
-package ${package}.services.example;
+package ${package}.adapter.example;
 
 import io.knotx.dataobjects.AdapterRequest;
 import io.knotx.dataobjects.AdapterResponse;
@@ -6,13 +6,13 @@ import io.knotx.dataobjects.ClientRequest;
 import io.knotx.junit.rule.KnotxConfiguration;
 import io.knotx.junit.rule.Logback;
 import io.knotx.junit.rule.TestVertxDeployer;
-import io.knotx.rxjava.proxy.AdapterProxy;
+import io.knotx.reactivex.proxy.AdapterProxy;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.unit.Async;
 import io.vertx.ext.unit.TestContext;
 import io.vertx.ext.unit.junit.RunTestOnContext;
 import io.vertx.ext.unit.junit.VertxUnitRunner;
-import io.vertx.rxjava.core.Vertx;
+import io.vertx.reactivex.core.Vertx;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
