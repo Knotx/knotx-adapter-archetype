@@ -60,7 +60,7 @@ Remember about updating Vert.x version too.
    ```
    
 7. On successful deployment, confirm that the artifacts with version X.Y.Z are available on the Nexus Staging:
-[https://oss.sonatype.org/content/groups/staging/io/knotx/](https://oss.sonatype.org/content/groups/staging/io/knotx/)
+[https://oss.sonatype.org/content/groups/staging/io/knotx/archetypes/](https://oss.sonatype.org/content/groups/staging/io/knotx/archetypes/)
 
 8. If everything is fine, promote the release to **Nexus Central Release Repositories**
 
