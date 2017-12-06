@@ -78,13 +78,16 @@ Remember about updating Vert.x version too.
 ```
     To generate a new project with dependency to Knot.x X.Y.Z use the following command:
     - Knot
-    ```
+    
+    `
     mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=X.Y.Z
-    ```
+    `
+    
     - Adapter
-    ```
+    
+    `
     mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=X.Y.Z
-    ```
+    `
 ```
 
 **Replace `<X.Y.Z>` in the maven.org URL with the proper version**
