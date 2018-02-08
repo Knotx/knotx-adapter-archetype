@@ -4,11 +4,10 @@ import io.knotx.adapter.AbstractAdapterProxy;
 import io.knotx.dataobjects.AdapterRequest;
 import io.knotx.dataobjects.AdapterResponse;
 import io.knotx.dataobjects.ClientResponse;
+import io.reactivex.Single;
 import io.vertx.core.buffer.Buffer;
-import io.vertx.core.json.JsonArray;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
-import rx.Single;
 
 public class ExampleServiceAdapterProxy extends AbstractAdapterProxy {
 
