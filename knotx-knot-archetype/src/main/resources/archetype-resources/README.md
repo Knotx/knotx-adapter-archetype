@@ -10,4 +10,10 @@ about the Knot concept and APIs used here.
 To run the extension:
 
 1. Build module with `mvn clean package`.
-2. Download latest
+2. Download proper version of Knot.x stack for [Knot.x bintray](https://bintray.com/knotx/downloads/distro).
+3. Update `conf/application.conf` with new module definition, global variables and `exampleKnot.conf` include.
+You will find all config entries in `conf/exampleStack.conf`.
+4. Update `server.conf` and alter `defaultFlow` to use example knot in the routing.
+5. Copy `includes/exampleKnot.conf` to the stack `conf/includes` directory.
+6. Copy `target/your-knot-extensions.jar` to `lib` directory in stack instance.
+7. Start your Knot.x stack instance.
