@@ -10,21 +10,20 @@ import io.vertx.core.logging.LoggerFactory;
 import io.vertx.reactivex.core.AbstractVerticle;
 import io.vertx.serviceproxy.ServiceBinder;
 
-
 public class ExampleServiceAdapter extends AbstractVerticle {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ExampleServiceAdapter.class);
 
   private MessageConsumer<JsonObject> consumer;
 
-  private ExampleServiceAdapterConfiguration configuration;
+  private ExampleServiceAdapterOptions configuration;
 
   private ServiceBinder serviceBinder;
 
   @Override
   public void init(Vertx vertx, Context context) {
     super.init(vertx, context);
-    configuration = new ExampleServiceAdapterConfiguration(config());
+    configuration = new ExampleServiceAdapterOptions(config());
   }
 
   @Override
@@ -43,3 +42,4 @@ public class ExampleServiceAdapter extends AbstractVerticle {
     serviceBinder.unregister(consumer);
   }
 }
+

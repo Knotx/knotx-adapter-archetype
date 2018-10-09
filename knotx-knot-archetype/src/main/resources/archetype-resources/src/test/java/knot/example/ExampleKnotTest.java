@@ -36,14 +36,14 @@ public class ExampleKnotTest {
   @Test
   @KnotxConfiguration("test-config.json")
   public void integrationTestToBeWrittenHere(TestContext context) {
-    callActionKnotWithAssertions(context, payload(),
+    callKnotWithAssertions(context, payload(),
         adapterResponse -> {
           // assertions here
         },
         error -> context.fail(error.getMessage()));
   }
 
-  private void callActionKnotWithAssertions(TestContext context, KnotContext knotContext,
+  private void callKnotWithAssertions(TestContext context, KnotContext knotContext,
       Consumer<KnotContext> onSuccess,
       Consumer<Throwable> onError) {
     Async async = context.async();

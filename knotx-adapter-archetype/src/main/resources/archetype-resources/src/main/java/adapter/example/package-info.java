@@ -1,4 +1,4 @@
 @ModuleGen(name = "${artifactId}", groupPackage = "${package}")
-package ${package}.knot.example;
+package ${package}.adapter.example;
 
 import io.vertx.codegen.annotations.ModuleGen;

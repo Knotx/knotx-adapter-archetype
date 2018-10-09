@@ -12,16 +12,13 @@
       <directory></directory>
       <includes>
         <include>README.md</include>
-        <include>knotx-standalone.json</include>
-        <include>knotx-standalone.logback.xml</include>
-        <include>run.sh</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="false">
-      <directory>content</directory>
+      <directory>conf</directory>
     </fileSet>
     <fileSet filtered="true" packaged="false">
-      <directory>app</directory>
+      <directory>content</directory>
     </fileSet>
     <fileSet filtered="true" packaged="true">
       <directory>src/main/java</directory>

@@ -16,14 +16,14 @@ public class ExampleKnot extends AbstractVerticle {
 
   private MessageConsumer<JsonObject> consumer;
 
-  private ExampleKnotConfiguration configuration;
+  private ExampleKnotOptions configuration;
 
   private ServiceBinder serviceBinder;
 
   @Override
   public void init(Vertx vertx, Context context) {
     super.init(vertx, context);
-    configuration = new ExampleKnotConfiguration(config());
+    configuration = new ExampleKnotOptions(config());
   }
 
   @Override
