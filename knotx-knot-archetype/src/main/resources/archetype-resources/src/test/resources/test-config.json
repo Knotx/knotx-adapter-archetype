@@ -1,5 +1,15 @@
 {
   "modules": [
-    "knotx:${package}.knot.example.ExampleKnot"
-  ]
+    "example=${package}.knot.example.ExampleKnot"
+  ],
+  "config": {
+    "example": {
+      "options": {
+        "config": {
+          "address": "knotx.knot.example",
+          "secret": "secretcode1234"
+        }
+      }
+    }
+  }
 }
