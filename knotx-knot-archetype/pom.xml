@@ -21,7 +21,7 @@
   <name>Knot.x Knot Archetype</name>
 
   <parent>
-    <groupId>io.knotx.archetypes</groupId>
+    <groupId>io.knotx</groupId>
     <artifactId>knotx-extension-archetype</artifactId>
     <version>1.3.0-SNAPSHOT</version>
   </parent>
