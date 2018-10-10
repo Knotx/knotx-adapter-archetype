@@ -3,9 +3,9 @@ package ${package}.knot.example;
 import io.knotx.dataobjects.ClientRequest;
 import io.knotx.dataobjects.KnotContext;
 import io.knotx.junit.rule.KnotxConfiguration;
-import io.knotx.junit.rule.Logback;
 import io.knotx.junit.rule.TestVertxDeployer;
 import io.knotx.reactivex.proxy.KnotProxy;
+import io.reactivex.functions.Consumer;
 import io.vertx.ext.unit.Async;
 import io.vertx.ext.unit.TestContext;
 import io.vertx.ext.unit.junit.RunTestOnContext;
@@ -15,13 +15,12 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
 import org.junit.runner.RunWith;
-import rx.functions.Action1;
 
 
 @RunWith(VertxUnitRunner.class)
 public class ExampleKnotTest {
 
-  private final static String ADAPTER_ADDRESS = "knotx.knot.example";
+  private static final String ADAPTER_ADDRESS = "knotx.knot.example";
 
   //Test Runner Rule of Verts
   private RunTestOnContext vertx = new RunTestOnContext();
@@ -31,42 +30,31 @@ public class ExampleKnotTest {
 
   //Junit Rule, sets up logger, prepares verts, starts verticles according to the config (supplied in annotation of test method)
   @Rule
-  public RuleChain chain = RuleChain.outerRule(new Logback()).around(vertx).around(knotx);
+  public RuleChain chain = RuleChain.outerRule(vertx).around(knotx);
 
 
   @Test
   @KnotxConfiguration("test-config.json")
   public void integrationTestToBeWrittenHere(TestContext context) {
-    callWithAssertions(context,
+    callKnotWithAssertions(context, payload(),
         adapterResponse -> {
           // assertions here
         },
         error -> context.fail(error.getMessage()));
   }
 
-  private void callWithAssertions(TestContext context,
-      Action1<KnotContext> onSuccess,
-      Action1<Throwable> onError) {
-    KnotContext knotContext = payload();
+  private void callKnotWithAssertions(TestContext context, KnotContext knotContext,
+      Consumer<KnotContext> onSuccess,
+      Consumer<Throwable> onError) {
     Async async = context.async();
 
-    KnotProxy knot = KnotProxy.createProxy(new Vertx(vertx.vertx()), ADAPTER_ADDRESS);
+    KnotProxy proxy = KnotProxy.createProxy(new Vertx(vertx.vertx()), ADAPTER_ADDRESS);
 
-    knot.rxProcess(knotContext)
+    proxy.rxProcess(knotContext)
+        .doOnSuccess(onSuccess)
         .subscribe(
-            success -> {
-              try {
-                onSuccess.call(success);
-              } catch (Throwable e) {
-                context.fail(e);
-              } finally {
-                async.complete();
-              }
-            },
-            err -> {
-              onError.call(err);
-              async.complete();
-            }
+            success -> async.complete(),
+            onError
         );
   }
 

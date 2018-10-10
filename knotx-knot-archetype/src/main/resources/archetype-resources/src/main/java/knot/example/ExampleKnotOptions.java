@@ -1,14 +1,16 @@
 package ${package}.knot.example;
 
+import io.vertx.codegen.annotations.DataObject;
 import io.vertx.core.json.JsonObject;
 
-class ExampleKnotConfiguration {
+@DataObject(generateConverter = true, publicConverter = false)
+class ExampleKnotOptions {
 
   private String address;
 
   private String secret;
 
-  ExampleKnotConfiguration(JsonObject config) {
+  public ExampleKnotOptions(JsonObject config) {
     address = config.getString("address");
     secret = config.getString("secret");
   }

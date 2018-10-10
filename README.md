@@ -11,7 +11,7 @@ Use this archetype to generate a custom Knot.x extension:
  - [Adapter](https://github.com/Cognifide/knotx/wiki/Adapter)
 
 Details regarding the content of a project generated using this archetype can be found
-in the `README.md` file in `src/main/resources/archetype-resources` in a particular submodule 
+in the `README.md` file in `src/main/resources/archetype-resources` in a particular submodule
 (or in the main directory once a project has been generated).
 
 ## Building the archetype
@@ -25,19 +25,19 @@ To build the archetype and install it in your local Maven repository, simply run
 You can generate a new project using the following command:
 
  - Knot
- 
+
  `
-    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=X.Y.Z
+    mvn archetype:generate -DarchetypeGroupId=io.knotx -DarchetypeArtifactId=knotx-knot-archetype -DarchetypeVersion=X.Y.Z
  `
  - Adapter
- 
+
  `
-    mvn archetype:generate -DarchetypeGroupId=io.knotx.archetypes -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=X.Y.Z
+    mvn archetype:generate -DarchetypeGroupId=io.knotx -DarchetypeArtifactId=knotx-adapter-archetype -DarchetypeVersion=X.Y.Z
  `
 
 Where `X.Y.Z` is the version of archetype (it corresponds to the Knot.x version) you want to use.
-For example, if you want to use the archetype `1.1.2-SNAPSHOT` that you've just built use `-DarchetypeVersion=1.1.2-SNAPSHOT`.
- 
+For example, if you want to use the archetype `1.3.0` that you've just built use `-DarchetypeVersion=1.3.0`.
+
 You will be asked to provide values for the following properties:
 
 - `groupId` - this is the group ID of the Maven project being generated
